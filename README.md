@@ -1,13 +1,12 @@
-# ScalaChallenge [![Build Status](https://travis-ci.org/andrerigon/ScalaChallenge.svg?branch=master)](https://travis-ci.org/andrerigon/ScalaChallenge)
+# Ultimate Triangle Detector [![Build Status](https://travis-ci.org/andrerigon/ultimate-triangle-detector.svg?branch=master)](https://travis-ci.org/andrerigon/ultimate-triangle-detector)
 
-Simple App to process task networks
+Detects Triangles
 
 ## Assumptions:
 
-1. At least 1 link statement must be provided
-2. Tasks statements are only for definition. They don't make sense without links. 
-3. Link statements will be executed in order (there is no info about how to process sequential input links)
-4. Delay information (tbb) becomes part of the input string for the next task
+1. Receives a list of triangle definitions separated by lines. Ex: 5 5 6
+
+2. Throws error if any of it is not a triangle
 
 ## Running tests:
 
@@ -24,6 +23,7 @@ make build run input=inputFile
 or just:
 
 make run input=inputFile
+
 
 
 
