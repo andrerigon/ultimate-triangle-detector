@@ -7,10 +7,9 @@ import scala.util.Try
   */
 object Main extends App {
 
-  val results = Try{
-    io.Source.stdin.getLines().map(_.split(" ").map(_.toLong).toList match {
+  val results = io.Source.stdin.getLines().map(_.split(" ").map(_.toLong).toList match {
       case x :: y :: z :: Nil => Detector(x, y, z)
+      case _ => throw new IllegalArgumentException("Missing triangle sides")
     })
-  }.getOrElse(throw new IllegalArgumentException("Invalid triangle sides"))
   results.foreach(println)
 }
