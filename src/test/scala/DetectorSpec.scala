@@ -27,4 +27,8 @@ class DetectorSpec extends FlatSpec with Matchers with MockitoSugar with BeforeA
   it should "return Equilateral if just two length's are equal" in {
     Detector(4, 5, 4) should be(Isosceles)
   }
+
+  it should "return Scalene if sides are different" in {
+    Detector(4, 5, 6) should be(Scalene)
+  }
 }
